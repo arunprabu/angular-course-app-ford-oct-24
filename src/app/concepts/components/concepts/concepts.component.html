@@ -1,1 +1,123 @@
-<p>concepts works!</p>
+<h1>Concepts of Angular</h1>
+
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button
+      class="nav-link active"
+      id="basic-databinding-tab"
+      data-bs-toggle="tab"
+      data-bs-target="#basic-databinding-tab-pane"
+      type="button"
+      role="tab"
+      aria-controls="basic-databinding-tab-pane"
+      aria-selected="true"
+    >
+      Basic Data Binding
+    </button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button
+      class="nav-link"
+      id="cpb-tab"
+      data-bs-toggle="tab"
+      data-bs-target="#cpb-tab-pane"
+      type="button"
+      role="tab"
+      aria-controls="cpb-tab-pane"
+      aria-selected="false"
+    >
+      Custom Property Binding
+    </button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button
+      class="nav-link"
+      id="ceb-tab"
+      data-bs-toggle="tab"
+      data-bs-target="#ceb-tab-pane"
+      type="button"
+      role="tab"
+      aria-controls="ceb-tab-pane"
+      aria-selected="false"
+    >
+      Custom Event Binding
+    </button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button
+      class="nav-link"
+      id="directives-tab"
+      data-bs-toggle="tab"
+      data-bs-target="#directives-tab-pane"
+      type="button"
+      role="tab"
+      aria-controls="directives-tab-pane"
+      aria-selected="false"
+    >
+      Directives
+    </button>
+  </li>
+</ul>
+
+<div class="tab-content" id="myTabContent">
+  <div
+    class="tab-pane fade show active"
+    id="basic-databinding-tab-pane"
+    role="tabpanel"
+    aria-labelledby="basic-databinding-tab"
+    tabindex="0"
+  >
+    <h2>Basic Data Binding</h2>
+    <h4>1. Interpolation</h4>
+    <p>App Name is: {{ appName }}</p>
+
+    <br /><br />
+    <h4>2. Property Binding</h4>
+    <input type="text" [value]="courseName" />
+
+    <br /><br />
+    <h4>3. Event Binding</h4>
+    <button (click)="handleClickMe($event)">Click Me</button>
+
+    <br><br>
+    <h4>4. Two way binding</h4>
+     <!-- interpolation-->
+    <p>Interpolation: {{courseDuration}}</p> 
+
+    <!-- property binding -->
+    <p>Property Binding:</p>
+    <input type="text" [value]="courseDuration">
+
+    <!-- Two Way Binding -->
+    <p>Two Way Binding:</p>
+    <input type="text" [(ngModel)]="courseDuration">
+
+  </div>
+  <div
+    class="tab-pane fade"
+    id="cpb-tab-pane"
+    role="tabpanel"
+    aria-labelledby="cpb-tab"
+    tabindex="0"
+  >
+    Custom Property Binding stuff
+  </div>
+  <div
+    class="tab-pane fade"
+    id="ceb-tab-pane"
+    role="tabpanel"
+    aria-labelledby="ceb-tab"
+    tabindex="0"
+  >
+    Custom Event Binding stuff
+  </div>
+  <div
+    class="tab-pane fade"
+    id="directives-tab-pane"
+    role="tabpanel"
+    aria-labelledby="directives-tab"
+    tabindex="0"
+  >
+    Directives stuff
+  </div>
+</div>

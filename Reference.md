@@ -28,17 +28,13 @@ Components
 
 Concepts
 =====
-  Routing 
+  Routing [DONE]
   Data Binding 
+  API Calls
 
 
 
 
-
-Data Binding 
----
-  keeping the data in component ts and displaying in component html 
-  
 
 Routing 
 =====
@@ -129,3 +125,32 @@ Project Structure
       employees/
       about/
       contact/
+
+
+Data Binding 
+---
+  keeping the data in component ts and displaying in component html 
+  
+  1. Interpolation 
+      TS => HTML 
+      {{}}
+
+  2. Property Binding
+      needed when you are binding the data in an attribute (i.e property)
+      TS => HTML 
+      []
+
+  3. Event Binding
+      TS <== HTML 
+      ()
+
+  4. Two Way Binding
+      TS <==> HTML 
+      [(ngModel)]
+      
+      Note: can be used in form fields only
+
+  5. Custom Property Binding
+  
+  6. Custom Event Binding
+
