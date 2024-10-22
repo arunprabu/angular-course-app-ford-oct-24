@@ -1,0 +1,7 @@
+/* component-specific styles*/
+/* you can override global styles here */
+.app-name {
+  color: #000;
+  background-color: yellow;
+  padding: 0px 10px;
+}
