@@ -154,3 +154,19 @@ Data Binding
   
   6. Custom Event Binding
 
+
+======
+
+Cross Component Communication
+======
+  1. Parent Component to child Component communication 
+      using Custom Property Binding
+
+  2. Child Component to parent Component communication
+      2.1 using Custom Event Binding
+      2.2 @ViewChild() 
+
+  3. Any to Any Component communication
+      3.1 Using  Service,RxJS/Observables and Subscription
+      3.2 NgRx 
+

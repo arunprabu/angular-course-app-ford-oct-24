@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ProfileComponent } from '../profile/profile.component';
 
 @Component({
   selector: 'app-concepts',
   standalone: true,
-  imports: [
-    FormsModule
-  ],
+  imports: [FormsModule, ProfileComponent],
   templateUrl: './concepts.component.html',
   styles: ``,
 })
@@ -18,7 +17,9 @@ export class ConceptsComponent {
   courseName = 'Angular 17';
 
   // two way binding related
-  courseDuration = "10 Days";
+  courseDuration = '10 Days';
+
+  myAge = 100;
 
   // event binding related
   handleClickMe(event: Event) {
