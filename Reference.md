@@ -163,8 +163,8 @@ Cross Component Communication
       using Custom Property Binding
 
   2. Child Component to parent Component communication [DONE]
-      2.1 using Custom Event Binding
-      2.2 @ViewChild() 
+      2.1 using Custom Event Binding 
+      2.2 @ViewChild()  [TODO]
 
   3. Any to Any Component communication 
       3.1 Using  Service,RxJS/Observables and Subscription
@@ -180,7 +180,14 @@ Directives
       routerLink, routerLinkActive, routerLinkActiveOptions, 
 
   2. Structural Directives
+      * Impact in structural layer (HTML)
       *ngIf 
       *ngFor 
-      ngSwitch 
+      ngSwitch [TODO]
+
+  3. Custom Attribute Directives
+      ng g d concepts/directives/colorizer 
+
+  4. Custom Structural Directives 
+
 

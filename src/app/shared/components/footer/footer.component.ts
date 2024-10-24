@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { MenuListComponent } from '../menu-list/menu-list.component';
 
 @Component({
-  selector: 'app-footer',
+  selector: 'app-footer', // element selector
   standalone: true,
   imports: [MenuListComponent],
   template: `
