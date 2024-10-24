@@ -150,23 +150,37 @@ Data Binding
       
       Note: can be used in form fields only
 
-  5. Custom Property Binding
+  5. Custom Property Binding [DONE]
   
-  6. Custom Event Binding
+  6. Custom Event Binding [DONE]
 
 
 ======
 
 Cross Component Communication
 ======
-  1. Parent Component to child Component communication 
+  1. Parent Component to child Component communication [DONE]
       using Custom Property Binding
 
-  2. Child Component to parent Component communication
+  2. Child Component to parent Component communication [DONE]
       2.1 using Custom Event Binding
       2.2 @ViewChild() 
 
-  3. Any to Any Component communication
+  3. Any to Any Component communication 
       3.1 Using  Service,RxJS/Observables and Subscription
       3.2 NgRx 
+
+======
+
+Directives
+====
+  Special Instructions to the DOM 
+
+  1. Attribute Directives
+      routerLink, routerLinkActive, routerLinkActiveOptions, 
+
+  2. Structural Directives
+      *ngIf 
+      *ngFor 
+      ngSwitch 
 
