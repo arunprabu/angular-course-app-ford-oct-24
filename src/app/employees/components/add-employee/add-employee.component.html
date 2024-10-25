@@ -1,0 +1,72 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Add Employee</h1>
+      <button class="btn btn-dark">Go Back</button>
+    </div>
+
+    <!-- Step 3: patchup form tag with the FormGroup in ts -->
+    <form class="col-md-6 offset-md-3">
+      <!-- step 7: work on submission flow -- ref ts for step 8-->
+      <div class="form-group row mb-3">
+        <label for="nameInput" class="col-sm-2 col-form-label">Name</label>
+        <div class="col-sm-10">
+          <!-- step 4: patchup form fields with the FormControl in ts -->
+          <!-- goto ts for step 5-->
+          <input
+            type="text"
+            class="form-control"
+            id="nameInput"
+            placeholder="Enter Name"
+          />
+          <!-- step6: displaying validation related msg -->
+          <div class="invalid-feedback">
+            <div id="nameRequired">Name is required</div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row mb-3">
+        <label for="phoneInput" class="col-sm-2 col-form-label">Phone</label>
+        <div class="col-sm-10">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter Phone"
+            id="phoneInput"
+          />
+          <div class="invalid-feedback">
+            <div id="phoneRequired">Phone is required</div>
+            <div>TODO: Max 10 Digits</div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row mb-3">
+        <label for="emailInput" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+          <input
+            type="email"
+            class="form-control"
+            placeholder="Enter Email"
+            id="emailInput"
+          />
+          <div class="invalid-feedback">
+            <div id="emailRequired">Email is required</div>
+            <div id="invalidEmail">Email seems to be not valid</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="alert alert-success">Saved Successfully</div>
+      <div class="alert alert-danger">Unable to Create Employee. Some error occurred. Try again later</div>
+
+      <div class="form-group row">
+        <div class="col-sm-10 offset-sm-2">
+          <button type="submit" class="btn btn-primary submitBtn">
+            Submit
+          </button>
+          <!-- TODO: Learn about disabling the submit button in case of error-->
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

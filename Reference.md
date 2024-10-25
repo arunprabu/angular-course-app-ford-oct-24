@@ -188,6 +188,47 @@ Directives
   3. Custom Attribute Directives
       ng g d concepts/directives/colorizer 
 
-  4. Custom Structural Directives 
+  4. Custom Structural Directives [TODO]
+      Refer: https://angular.dev/guide/directives/structural-directives#creating-a-structural-directive
 
 
+===========
+
+Employee Management (CRUD)
+---
+
+  1. List Employees (READ)
+    http://localhost:4200/employees
+    Component: ListEmployeesComponent
+    ng g c employees/components/list-employees 
+    Http Method: GET
+    REST API URL: https://jsonplaceholder.typicode.com/users
+
+  2. Add Employee (CREATE)
+    http://localhost:4200/employees/add
+    Component: AddEmployeeComponent
+    ng g c employees/components/add-employee --inline-style
+    Http Method: POST
+    REST API URL: https://jsonplaceholder.typicode.com/users
+
+  3. Employee Details (READ)
+    http://localhost:4200/employees/1
+    http://localhost:4200/employees/45
+    Component: EmployeeDetailsComponent
+    ng g c employees/components/employee-details --inline-style
+    Http Method: GET
+    REST API URL: https://jsonplaceholder.typicode.com/users/1
+
+  4. Update Employee (UPDATE)
+    http://localhost:4200/employees/1/edit
+    ng g c employees/components/update-employee --inline-style
+    Component: UpdateEmployeeComponent
+    Http Method: PUT 
+    REST API URL: https://jsonplaceholder.typicode.com/users/1
+
+
+  5. Delete Employee (DELETE) [TODO]
+    http://localhost:4200/employees/1
+    Component: EmployeeDetailsComponent
+    Http Method: DELETE
+    REST API URL: https://jsonplaceholder.typicode.com/users/1

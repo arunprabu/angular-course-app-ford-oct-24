@@ -15,3 +15,5 @@
 11. Try implementing *ngFor in Custom Property Binding demo
 12. Try ngSwitch in concepts.comp.html 
 13. Try handling mouseover event in colorizer.directive.ts 
+14. Try  Custom Structural Directives (OPTIONAL)
+
