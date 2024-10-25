@@ -232,3 +232,46 @@ Employee Management (CRUD)
     Component: EmployeeDetailsComponent
     Http Method: DELETE
     REST API URL: https://jsonplaceholder.typicode.com/users/1
+
+=====
+
+
+Angular Forms
+-------
+  1. Template Driven Forms [NOT RECOMMENDED]
+        * build with only htmls 
+        * easist type of form 
+        * validations can be implemented with attribute directives 
+        * Disadvantags: 
+          1. not suitable for complex form validations
+          2. not suitable for unit testing 
+
+  2. Reactive Forms [RECOMMENDED]
+        * build with HTML + TS 
+        * easy 
+        * validations can be implemented with TS
+
+        * Advantages:
+          1. Suitable for complex form validations
+          2. Suitable for unit testing
+
+
+Reactive Forms Tutorial
+==========
+  Step 0: Have the html form ready 
+
+  Step 1: Have the form tag equivalent in TS 
+
+  Step 2: Have the form field equivalents in TS 
+
+  Step 3: Patch up the form tag with the TS equivalent
+
+  Step 4: Patch up the html form fields with the TS equivalents
+
+  Step 5: Implement validations in TS
+
+  Step 6: Displaying validation related msg in HTML
+
+  Step 7: Work on submission flow
+
+

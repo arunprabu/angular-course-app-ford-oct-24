@@ -21,4 +21,14 @@ export class EmployeesService {
     // 3. get the response from the REST api
     // 4. return the response to the component
   }
+
+  addEmployee(formData: any) {
+    console.log(formData);
+
+    // 2. send the data to the REST api
+    // 2.1 What's the REST API URL? apiUrl
+    // 2.2 What's the HTTP Method? POST
+    // 2.3 What's the REST API Client Tool? HttpClient
+    return this.http.post(this.apiUrl, formData);
+  }
 }
