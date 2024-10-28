@@ -17,9 +17,16 @@
 13. Try handling mouseover event in colorizer.directive.ts [DONE]
 14. Try  Custom Structural Directives (OPTIONAL) 
 
-15. Learn about disabling the submit button in case of error in add-employee.comp.html
+15. Learn about disabling the submit button in case of validation error in add-employee.comp.html
 16. Learn about handling max 10 digits validation in phone field
 17. Learn about implementing toast message in add employee logic
+
+18. Try showing the loader in list-employees.comp.html 
+19. Try showing the loader in employee-details.comp.html 
+20. Implement update and delete functionalities in captsone project
+
+
+
 
 
 

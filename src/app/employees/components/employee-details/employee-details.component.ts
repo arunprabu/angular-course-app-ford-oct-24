@@ -13,10 +13,11 @@ import { EmployeesService } from '../../services/employees.service';
 })
 export class EmployeeDetailsComponent implements OnInit {
   employeeId: any;
+  employee: any;
 
   constructor(private employeeService: EmployeesService, private route: ActivatedRoute) {
     // Reading the URL param
-    this.employeeId = this.route.snapshot.paramMap.get('empId');
+    this.employeeId = this.route.snapshot.paramMap.get('id');
   }
 
   ngOnInit(): void {
@@ -26,6 +27,7 @@ export class EmployeeDetailsComponent implements OnInit {
     this.employeeService.getEmployeeById(this.employeeId)
       .subscribe((response: any) => {
         console.log(response);
+        this.employee = response;
       });
     // 2. Get the response from the service
   }

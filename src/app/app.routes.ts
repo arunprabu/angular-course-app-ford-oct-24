@@ -17,8 +17,8 @@ export const routes: Routes = [
     children: [
       { path: '', component: ListEmployeesComponent },
       { path: 'add', component: AddEmployeeComponent },
-      { path: ':empId', component: EmployeeDetailsComponent }, // id is url param
-      { path: ':empId/edit', component: UpdateEmployeeComponent },
+      { path: ':id', component: EmployeeDetailsComponent }, // id is url param
+      { path: ':id/edit', component: UpdateEmployeeComponent },
     ],
   },
   { path: 'about', component: AboutComponent },
