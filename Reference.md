@@ -31,7 +31,8 @@ Concepts
   Routing [DONE]
   Data Binding 
   API Calls
-
+  Auth
+  RxJs
 
 
 
@@ -275,3 +276,155 @@ Reactive Forms Tutorial
   Step 7: Work on submission flow
 
 
+
+
+
+Till angular 16 (ng cli v16.x)
+---
+  ng new my-app 
+
+  * default angular projects are of module based 
+  * components are not standalone by default
+
+After Angular 17  (ng cli v 17.x)
+-----
+  ng new my-app   
+  
+   * default angular projects are of standalone components (not module based)
+   * however you can work with modules as well
+
+
+
+
+========
+
+## How to have a project with both standalone and feature module based components?
+
+ng new my-app (new project structure without app module - if it is angular 17+ project)
+
+**Step 1:**
+
+Feature Module and Feature Routing Module
+
+ - ng g m users/users --flat
+ - ng g m users/users-routing --flat
+
+  
+ 
+**Step 2:**
+
+Afterwards, create the necessary components
+
+ - ng g c users/components/add-user 
+ - ng g c users/components/list-users
+
+  
+
+Step 3:
+
+Then, include the above 2 components in users.module.ts
+
+    import { NgModule } from '@angular/core';
+    import { UsersRoutingModule } from './users-routing.module';
+    import { AddUserComponent } from './components/add-user/add-user.component';
+    import { ListUsersComponent } from './components/list-users/list-users.component';
+    
+    @NgModule({
+      declarations: [
+        AddUserComponent, // REFER here
+        ListUsersComponent, // REFER here
+      ],
+      imports: [UsersRoutingModule], // Load the routing module here   
+    })
+ 
+    export class UsersModule {}
+
+  
+
+Step 4:
+
+Then, let's complete the routing config for this feature
+
+go to users-routing.module.ts
+
+  
+
+Have the following
+    // user/users-routing.module.ts
+    
+    import { NgModule } from '@angular/core';
+    
+    import { RouterModule, Routes } from '@angular/router';
+    
+    import { AddUserComponent } from './components/add-user/add-user.component';
+    
+    import { ListUsersComponent } from './components/list-users/list-users.component';
+    
+      
+    
+    const routes: Routes = [
+    
+    { path: 'list', component: ListUsersComponent }, // routing config
+    
+    { path: 'add', component: AddUserComponent }, // routing config
+    
+    { path: '', redirectTo: 'list', pathMatch: 'full' }, // routing config
+    
+    ];
+    
+      
+    
+    @NgModule({
+    
+    // DO NOT MISS THESE TWO LINES
+    
+    imports: [RouterModule.forChild(routes)], // registering the routes
+    
+    exports: [RouterModule],
+    
+    })
+    
+    export class UsersRoutingModule {}
+
+  
+
+Step 5:
+
+Lazily load the feature module in app.routes.ts
+
+  
+  
+
+    // configure the routes
+    
+    export const routes: Routes = [
+    
+    { path: '', component: HomeComponent },
+    
+    { path: 'about', component: AboutComponent },
+    
+    { path: 'contact', component: ContactComponent },
+    
+    {
+    
+    path: 'users',
+    
+    // lazy loading a module
+    
+    loadChildren: () =>
+    
+    import('./users/users.module').then((m) => m.UsersModule),
+    
+    },
+    
+    ];
+
+  
+
+Step 6:
+
+All the setup is done.
+
+**hit the urls**
+ - localhost:4200/users/list
+ - localhost:4200/users/add

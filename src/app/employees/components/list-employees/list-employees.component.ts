@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { EmployeesService } from '../../services/employees.service';
 import { CommonModule } from '@angular/common';
+import { IEmployee } from '../../models/iemployee';
 
 @Component({
   selector: 'app-list-employees',
@@ -11,7 +12,7 @@ import { CommonModule } from '@angular/common';
   styles: ``,
 })
 export class ListEmployeesComponent implements OnInit {
-  employees: any[] = [];
+  employees: IEmployee[] = [];
 
   // Connect to the Service using dep injection
   constructor(private employeeService: EmployeesService) {
@@ -26,7 +27,7 @@ export class ListEmployeesComponent implements OnInit {
     console.log('2. INSIDE ngOnInit');
 
     // 1. Send the request to the service
-    this.employeeService.getEmployees().subscribe((response: any) => {
+    this.employeeService.getEmployees().subscribe((response: IEmployee[]) => {
       console.log(response);
       this.employees = response;
     });
