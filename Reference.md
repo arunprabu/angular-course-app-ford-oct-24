@@ -428,3 +428,52 @@ All the setup is done.
 **hit the urls**
  - localhost:4200/users/list
  - localhost:4200/users/add
+
+
+====
+Capstone Project 
+================
+  CRUD Operations
+    * has one issue -- CORS issue (tomorrow)
+
+  ====
+  Develop the Front end in Angular for the same crud app 
+    * Pages 
+      1. Home 
+          localhost:4200/
+      2. Events 
+        2.1 List Events 
+            localhost:4200/events
+        2.2 Add Event (have the form, do the validation, and complete the flow)
+            localhost:4200/events/add
+        2.3 Event Details 
+            localhost:4200/events/1
+        2.4 Update Event 
+            localhost:4200/events/1/edit
+        2.5 Delete Event
+            localhost:4200/events/1
+      3. About
+          localhost:4200/about
+
+      
+
+    Points to remember
+    ==================
+      * Use bootstrap for UI
+      * UI can be styled as per your wish
+      * Make it visually better 
+      * Make it responsive (mobile, tablet friendly) 
+      * Follow the best practices
+      * Follow the conventions 
+      * code quality should be of 100%
+
+
+
+    Peer Review
+    ------
+      * Review the code and provide comments
+
+
+
+
+
